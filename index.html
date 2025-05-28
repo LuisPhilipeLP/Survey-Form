@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Health Survey-->
+ 
+
+  <head>
+    <meta charset="utf-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Health Survey</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <header>
+        <h1 id="title">Health Survey</h1>
+        <p id="description">Please fill out the form below</p>
+      </header>
+      <div id="form-container">
+      <form id="survey-form">
+
+        <div class="form-group">
+          <label id="name-label" for="name" >Name</label><input name="name" class="move-input-below" id="name" type="text" placeholder="Enter your name" required>
+        </div>
+
+        <div class="form-group">
+          <label id="email-label" for="email">Email</label><input id="email" type="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+          <label id="age-label" for="age">Age</label>
+            <select id="age" name="age" required>
+              <option value="youth">18-29</option>
+              <option value="adult">30-45</option>
+              <option value="mid-age">46-65</option>
+              <option value="elder">65+</option>
+            </select>          
+        </div>
+
+        <div class="form-group">
+          <label id="number-label" for="number">How many years have you worked out for?</label><input id="number" name="number" type="number" min="0" max="120" step="1" placeholder="(Zero if none)">
+        </div>
+
+        <div class="form-group">
+          <label id="dropdown-label" for="dropdown">Where do you workout ?</label>
+            <select id="dropdown" name="dropdown">
+              <option value="home">At home</option>
+              <option value="calisthenics">Calisthenics</option>
+              <option value="gym">Gym</option>
+              <option value="other">Other</option>
+              <option value="sedentary">I don't workout</option>
+            </select>
+        </div>
+
+        <div class="different-input">
+          <p>How often do you take any supplements?</p>
+          <label>
+          <input name="frequency" value="frequently" type="radio" checked>
+          Frequently
+          </label>
+
+          <label>
+          <input name="frequency" value="sometimes" type="radio">
+          Sometimes
+          </label>
+
+          <label>
+          <input name="frequency" value="never" type="radio">
+          Never
+          </label>
+        </div>
+
+        <div class="different-input">
+          <p>Have you ever practiced any of the following sports?</p>
+
+          <label>
+            <input value="swimming" name="checkbox[]" type="checkbox">
+            Swimming
+          </label>
+          <label>
+            <input value="running" name="checkbox[]" type="checkbox">
+            Running
+          </label>
+          <label>
+            <input value="basketball" name="checkbox[]" type="checkbox">
+            Basketball
+          </label>
+          <label>
+            <input value="football" name="checkbox[]" type="checkbox">
+            Football
+          </label>
+        </div>
+
+      <div id="text-area-description" class="form-group different-input">
+        <p>Additional information</p>
+        <textarea placeholder="Your comment..."></textarea>
+      </div>
+
+        <div id="div-button">
+          <button id="submit" type="submit">Submit</button>
+        </div>
+        
+      </form>
+      </div>
+    </div>
+  </body>
+</html>
